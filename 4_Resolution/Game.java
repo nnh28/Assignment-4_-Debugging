@@ -41,8 +41,10 @@ public class Game {
 		
 		int winnings = matches * bet;
 
-		if (matches > 0) {			
-			player.receiveWinnings(winnings);
+
+		if (matches > 0) {
+            //If the player wins, give them their bet back as well
+			player.receiveWinnings(winnings+bet);
 		}
         return winnings;		
 	}
